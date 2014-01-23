@@ -72,7 +72,7 @@
 
    <!-- IMU brick mount on raw3-1 -->
    <joint name="imu_brick_joint" type="fixed" >
-      <origin xyz="0.495 -0.06750 0.498" rpy="0 0 0" />
+      <origin xyz="0.495 -0.06750 0.508" rpy="0 0 0" />
       <parent link="base_link" />
       <child link="imu_brick_link" />
     </joint>
