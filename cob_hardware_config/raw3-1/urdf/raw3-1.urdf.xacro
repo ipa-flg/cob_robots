@@ -93,4 +93,25 @@
     </link>
     <!-- END: IMU brick	mount -->
 
+    <!-- Softkinetic 'left' mount on raw3-1 -->
+    <joint name="softkinetic_left_joint" type="fixed" >
+      <origin xyz="0.495 0.06750 0.498" rpy="0 0 0" />
+      <parent link="base_link" />
+      <child link="softkinect_left_link" />
+    </joint>
+    
+    <link name="softkinect_left_link">
+       <inertial>
+            <mass value="0.0001" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001" />
+       </inertial>
+       <visual>
+   	    <origin xyz="0 0 0" rpy="0 0 0" />
+	    <geometry>
+    	       <box size="0.03 0.10 0.05" />
+	    </geometry>
+	    <material name="IPA/LightGrey" />
+       </visual>
+    </link>
   </robot>
