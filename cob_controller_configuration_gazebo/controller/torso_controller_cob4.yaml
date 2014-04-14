@@ -1,0 +1,36 @@
+torso_controller:
+  type: "robot_mechanism_controllers/JointTrajectoryActionController"
+  joints:
+    - torso_1_joint
+    - torso_2_joint
+    - torso_3_joint
+  gains:
+    torso_1_joint:
+      p: 1000.0
+      i: 5.0
+      d: 0.0
+      i_clamp: 5.0
+    torso_2_joint:
+      p: 1000.0
+      i: 1.0
+      d: 0.0
+      i_clamp: 1.0
+    torso_3_joint:
+      p: 1000.0
+      i: 1.0
+      d: 0.0
+      i_clamp: 1.0
+
+  torso_joint_trajectory_action_node:
+    joints:
+    - torso_1_joint
+    - torso_2_joint
+    - torso_3_joint
+    constraints:
+      goal_time: 0.6
+      torso_1_joint:
+        goal: 0.1
+      torso_2_joint:
+        goal: 0.1
+      torso_3_joint:
+        goal: 0.1
